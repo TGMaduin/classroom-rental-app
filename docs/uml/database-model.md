@@ -32,11 +32,7 @@ erDiagram
         string name
         int capacity
         boolean disability_accessible
-    }
-
-    CLASSROOM_EQUIPMENT {
-        int classroom_id PK, FK
-        string equipment_type PK
+        string equipment_type
     }
 
     BOOKING {

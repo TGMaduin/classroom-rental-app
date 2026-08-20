@@ -158,8 +158,10 @@ The following business rules require application-level validation:
 * The selected classroom must meet the requested capacity.
 * The selected classroom must contain all required equipment.
 * The selected classroom must meet the requested accessibility requirement.
+* The booking user creating a booking must belong to the same customer associated with that booking.
 
 The application should perform these validations before inserting a booking.
+Where supported by the selected database, simple validation rules such as positive capacity and an end time later than the start time may also be enforced using database constraints.
 
 ---
 

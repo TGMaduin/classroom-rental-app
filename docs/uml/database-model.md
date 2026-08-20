@@ -27,12 +27,16 @@ erDiagram
         string email
     }
 
+    CLASSROOM_EQUIPMENT {
+        int classroom_id PK, FK
+        string equipment_type PK
+    }
+
     CLASSROOM {
         int id PK
         string name
         int capacity
         boolean disability_accessible
-        string equipment_type
     }
 
     BOOKING {

@@ -77,7 +77,7 @@ public class Customer {
     @Override
     public String toString() {
         return String.format(
-                "ID: %d | %s | %s | %s | %s",
+                "ID: %d | Name: %s | Email: %s | Phone: %s | Type: %s",
                 id, name, email, phone, type
         );
     }

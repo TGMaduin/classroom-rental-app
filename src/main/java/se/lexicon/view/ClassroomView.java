@@ -5,6 +5,7 @@ import se.lexicon.model.Equipment;
 
 import java.util.EnumSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 public class ClassroomView {
@@ -16,11 +17,10 @@ public class ClassroomView {
         int capacity = Integer.parseInt(IO.readln("Classroom capacity: "));
         boolean accessible = IO.readln("Classroom accessible (yes/no): ").equalsIgnoreCase("yes");
         Set<Equipment> equipment = EnumSet.noneOf(Equipment.class);
-        if(IO.readln("Has projector (yes/no): ").equalsIgnoreCase("yes")){
-            equipment.add(Equipment.PROJECTOR);
-        }
-        if(IO.readln("Has whiteboard (yes/no): ").equalsIgnoreCase("yes")){
-            equipment.add(Equipment.WHITEBOARD);
+        for(Equipment equip : Equipment.values()){
+            if(IO.readln("Has " + equip.name().toLowerCase() + "? (yes/no): ").equalsIgnoreCase("yes")){
+                equipment.add(equip);
+            }
         }
         return new Classroom(name, capacity, accessible, equipment);
     }

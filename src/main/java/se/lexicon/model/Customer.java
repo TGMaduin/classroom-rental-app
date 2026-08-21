@@ -3,9 +3,9 @@ package se.lexicon.model;
 public class Customer {
 
     private int id;
-    private  String name;
-    private  String email;
-    private  String phone;
+    private String name;
+    private String email;
+    private String phone;
     private CustomerType type;
     private String organizationNumber;
 
@@ -55,10 +55,6 @@ public class Customer {
 
     public CustomerType getType() {
         return type;
-    }
-
-    public void setType(CustomerType type) {
-        this.type = type;
     }
 
     public String getOrganizationNumber() {

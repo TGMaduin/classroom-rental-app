@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS customer (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL,
-    phone VARCHAR(15);
+    phone VARCHAR(15),
     customer_type VARCHAR(20) NOT NULL,
     organization_number VARCHAR(50)
 );
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS classroom (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL UNIQUE,
     capacity INT NOT NULL CHECK (capacity > 0),
-    disability_accessible BOOLEAN NOT NULL,
+    disability_accessible BOOLEAN NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS booking (

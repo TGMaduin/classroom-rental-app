@@ -8,24 +8,23 @@ public class Booking {
     private LocalDateTime startDateTime;
     private LocalDateTime endDateTime;
     private String comments;
-    private int customerId;
-    private int bookingUserId;
-    private int classroomId;
+    private Customer customer;
+    private BookingUser bookingUser;
+    private Classroom classroom;
 
     /* --- This constructor is used when creating a new booking, the DB automatically generates the id --- */
-    public Booking(LocalDateTime startDateTime, LocalDateTime endDateTime, String comments, int customerId, int bookingUserId, int classroomId) {
+    public Booking(LocalDateTime startDateTime, LocalDateTime endDateTime, String comments, Customer customer, BookingUser bookingUser, Classroom classroom) {
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
         this.comments = comments;
-        this.customerId = customerId;
-        this.bookingUserId = bookingUserId;
-        this.classroomId = classroomId;
-
+        this.customer = customer;
+        this.bookingUser = bookingUser;
+        this.classroom = classroom;
     }
 
     /* --- This constructor is used when reading an existing booking from the DB --- */
-    public Booking(int id, LocalDateTime startDateTime, LocalDateTime endDateTime, String comments, int customerId, int bookingUserId, int classroomId) {
-        this(startDateTime, endDateTime, comments,  customerId, bookingUserId, classroomId);
+    public Booking(int id, LocalDateTime startDateTime, LocalDateTime endDateTime, String comments, Customer customer, BookingUser bookingUser, Classroom classroom) {
+        this(startDateTime, endDateTime, comments, customer, bookingUser, classroom);
         this.id = id;
     }
 
@@ -44,6 +43,18 @@ public class Booking {
 
     public String getComments(){
         return comments;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public BookingUser getBookingUser() {
+        return bookingUser;
+    }
+
+    public Classroom getClassroom() {
+        return classroom;
     }
 
     public void setStartDateTime(LocalDateTime startDateTime){

@@ -5,7 +5,6 @@ import se.lexicon.model.Equipment;
 
 import java.util.EnumSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 public class ClassroomView {

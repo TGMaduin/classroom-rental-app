@@ -187,17 +187,8 @@ In particular, the system must decide what should happen if a customer, booking 
 
 The Java domain model uses `LocalDateTime` for booking start and end times.
 
-The exact SQL representation will depend on the selected database implementation.
+The selected database implementation is MySQL.
 
 Conversion between SQL values and `LocalDateTime` will be handled by the persistence layer.
 
 ---
-
-## Pending Database Decisions
-
-The following decisions should be resolved before implementing the database:
-
-* Which SQL database implementation should be used.
-* How Java enum values should be stored in SQL.
-* What deletion behavior should apply to records referenced by bookings.
-* Whether database-level constraints should supplement application-level booking validation.

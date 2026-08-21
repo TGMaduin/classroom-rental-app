@@ -9,9 +9,9 @@ public class CustomerView {
         String email = IO.readln("Email: ");
         String phone = IO.readln("Phone: ");
         String type = IO.readln("Customer type (COMPANY/INDIVIDUAL): ");
-        String orgaNumber = IO.readln("Organization number (optional): ");
+        String organizationNumber = IO.readln("Organization number (optional): ");
 
-        return new Customer(name, email, phone, CustomerType.valueOf(type.toUppercase()), orgaNumber.isBlank() ? null : orgaNumber);
+        return new Customer(name, email, phone, CustomerType.valueOf(type.toUpperCase()), organizationNumber.isBlank() ? null : organizationNumber);
     }
 
     /* --- Displays all the existing customers --- */

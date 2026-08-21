@@ -57,14 +57,6 @@ public class Booking {
         return classroom;
     }
 
-    public void setStartDateTime(LocalDateTime startDateTime){
-        this.startDateTime = startDateTime;
-    }
-
-    public void setEndDateTime(LocalDateTime endDateTime){
-        this.endDateTime = endDateTime;
-    }
-
     public void setComments(String comments){
         this.comments = comments;
     }

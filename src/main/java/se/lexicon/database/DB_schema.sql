@@ -36,8 +36,8 @@ CREATE TABLE IF NOT EXISTS booking (
     customer_id INT NOT NULL,
     booking_user_id INT NOT NULL,
     classroom_id INT NOT NULL,
-    start_date_time TIMESTAMP NOT NULL,
-    end_date_time TIMESTAMP NOT NULL,
+    start_date_time DATETIME NOT NULL,
+    end_date_time DATETIME NOT NULL,
     comments VARCHAR(1000),
 
     CONSTRAINT fk_booking_customer_id

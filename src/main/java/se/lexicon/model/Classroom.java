@@ -12,7 +12,7 @@ public class Classroom {
     private Set<Equipment> equipment;
 
     /* --- This constructor is used when creating a new classroom, the DB automatically generates the id --- */
-    public Classroom(String name, int capacity, boolean disabilityAccessible) {
+    public Classroom(String name, int capacity, boolean disabilityAccessible, Set<Equipment> equipment) {
         this.name = name;
         this.capacity = capacity;
         this.disabilityAccessible = disabilityAccessible;
@@ -23,7 +23,7 @@ public class Classroom {
     }
 
     /* --- This constructor is used when reading an existing classroom from the DB --- */
-    public Classroom(int id, String name, int capacity, boolean disabilityAccessible) {
+    public Classroom(int id, String name, int capacity, boolean disabilityAccessible, Set<Equipment> equipment) {
         this(name, capacity, disabilityAccessible, equipment);
         this.id = id;
     }

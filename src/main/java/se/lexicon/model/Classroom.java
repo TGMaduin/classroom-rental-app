@@ -2,6 +2,7 @@ package se.lexicon.model;
 
 import java.util.Collections;
 import java.util.EnumSet;
+import java.util.Set;
 
 public class Classroom {
 

@@ -12,4 +12,6 @@ public interface ClassroomDao {
     Optional<Classroom> findById(int id);
 
     List<Classroom> findAll();
+
+    void update(Classroom classroom);
 }
